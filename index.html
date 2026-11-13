@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Start Screen -->
+    <div id="start-screen" class="card">
+
+        <h1>Number Guessing Challenge</h1>
+
+        <p class="subtitle">
+            Guess the hidden number selected by the computer before your attempts run out.
+        </p>
+
+        <div class="rules-box">
+            <h2>How to Play</h2>
+            <ul>
+                <li>Easy: 1 to 50 (10 attempts)</li>
+                <li>Medium: 1 to 100 (7 attempts)</li>
+                <li>Hard: 1 to 200 (5 attempts)</li>
+                <li>Use the Higher or Lower hints to find the number faster for a better score.</li>
+            </ul>
+        </div>
+
+        <div class="form-group">
+            <label for="difficulty">Select Difficulty</label>
+            <select id="difficulty">
+                <option value="easy">Easy (1-50, 10 Attempts)</option>
+                <option value="medium" selected>Medium (1-100, 7 Attempts)</option>
+                <option value="hard">Hard (1-200, 5 Attempts)</option>
+            </select>
+        </div>
+
+        <button id="start-button" type="button" class="box-btn">
+            Start Game
+        </button>
+
+    </div>
+
+    <!-- Main Game Screen -->
+    <div id="game-screen" class="card" style="display: none;">
+
+        <h1>Number Guessing Challenge</h1>
+
+        <div class="game-info">
+            <p id="range" class="info-box">Range: 1 to 100</p>
+            <p id="level" class="info-box">Difficulty: MEDIUM</p>
+        </div>
+
+        <div class="guess-box">
+            <label for="guess">Enter Your Guess</label>
+            <input type="number" id="guess" placeholder="Enter a number">
+            <button id="submit-button" type="button" class="box-btn">
+                Submit Guess
+            </button>
+        </div>
+
+        <p id="result"></p>
+
+        <div class="stats">
+            <p id="attempts" class="stat-box">Attempts Left: 7</p>
+            <p id="score" class="stat-box">Current Score: 0</p>
+        </div>
+
+    </div>
+
+    <!-- Result Screen -->
+    <div id="result-screen" class="card" style="display: none;">
+
+        <h1 id="final-message"></h1>
+
+        <div class="result-grid">
+            <p id="correct-number" class="result-box"></p>
+            <p id="final-attempts" class="result-box"></p>
+            <p id="final-score" class="result-box"></p>
+        </div>
+
+        <button id="play-again-button" type="button" class="box-btn">
+            Play Again
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
