@@ -1,0 +1,249 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Page layout and background */
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ffffff;
+  background-color: #111827;
+  background-image: url("https://i.pinimg.com/originals/93/9e/92/939e9273e3d6ef4f281cda31e9e62488.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Main card container */
+.card {
+  width: 100%;
+  max-width: 500px;
+  padding: 28px;
+  background-color: rgba(0, 0, 0, 0.58);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Headings and text */
+h1 {
+  margin: 0;
+  font-size: 28px;
+  text-align: center;
+  color: #ffffff;
+}
+
+h2 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+p {
+  margin: 0;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 15px;
+  color: #f1f5f9;
+}
+
+/* Rules box */
+.rules-box {
+  padding: 14px 18px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 6px;
+}
+
+.rules-box ul {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rules-box li {
+  font-size: 15px;
+  color: #ffffff;
+}
+
+/* Inputs and labels */
+.form-group,
+.guess-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+select,
+input {
+  width: 100%;
+  padding: 10px 12px;
+  font-family: inherit;
+  font-style: italic;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  border-radius: 6px;
+}
+
+select option {
+  background-color: #1e293b;
+  color: #ffffff;
+}
+
+input {
+  text-align: center;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+select:focus,
+input:focus {
+  outline: none;
+  border-color: #ffffff;
+}
+
+/* Box buttons */
+.box-btn {
+  width: 100%;
+  padding: 12px 20px;
+  font-family: inherit;
+  font-style: italic;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.box-btn:hover {
+  background-color: #ffffff;
+  color: #111827;
+}
+
+.box-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Info and stats grid */
+.game-info,
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.info-box,
+.stat-box,
+.result-box {
+  padding: 10px 12px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 6px;
+}
+
+/* Hint and error messages */
+#result {
+  padding: 10px 12px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 6px;
+}
+
+#result:empty {
+  display: none;
+}
+
+#result.warning {
+  color: #fde047;
+  border-color: #fde047;
+}
+
+#result.error {
+  color: #fca5a5;
+  border-color: #f87171;
+}
+
+#result.success {
+  color: #86efac;
+  border-color: #4ade80;
+}
+
+/* Result screen layout */
+.result-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+#final-message {
+  padding: 10px 12px;
+  font-size: 24px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid #ffffff;
+  border-radius: 6px;
+}
+
+#final-message.win {
+  color: #86efac;
+  border-color: #4ade80;
+}
+
+#final-message.lose {
+  color: #fca5a5;
+  border-color: #f87171;
+}
+
+/* Mobile screen layout */
+@media (max-width: 500px) {
+  body {
+    padding: 12px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .game-info,
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}
