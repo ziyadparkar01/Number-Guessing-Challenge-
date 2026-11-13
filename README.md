@@ -39,8 +39,8 @@ The game also tracks the remaining attempts and calculates the player's score.
 
 | Technology | Purpose |
 |---|---|
-| HTML5 | Creates the structure and elements of the game. |
-| CSS3 | Handles styling, layout, colours, and visual appearance. |
+| HTML | Creates the structure and elements of the game. |
+| CSS | Handles styling, layout, colours, and visual appearance. |
 | JavaScript | Implements game logic, random number generation, validation, hints, and scoring. |
 
 ## 📂 Project Structure
